@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +16,24 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+// ------------------------------------------Frontend Route-------------------------------------------
+Route::get('/', [HomeController::class, 'index'])->name('#');
 
-Route::get('/', function () {
-    return view('frontend.home.index');
+
+
+// ------------------------------------------Admin routes --------------------------------------------
+Route::middleware(['auth', 'verified'])->group(function () {
+
+    # ---------------------------------------Dashboard -----------------------------------------------
+    Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
