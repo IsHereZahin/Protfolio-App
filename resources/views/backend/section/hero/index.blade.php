@@ -38,10 +38,12 @@
                 <div class="card">
                     <img src="{{ asset('images/hero') }}/{{$hero->image}}" class="card-img-top" alt="..." style="width: 100%; height:auto">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $hero->title1 }}</h5>
-                        <h5 class="card-title">{{ $hero->title2 }}</h5>
-                        <p class="card-text">{{ $hero->description }}</p>
-                        <a href="#" class="btn btn-primary">Get started : {{ $hero->url }}</a>
+                        <h5 class="card-title">Name     :{{ $hero->name }}</h5>
+                        <p class="card-text">Twitter        : {{ $hero->twitter_url }}</p>
+                        <p class="card-text">Facebook       : {{ $hero->fb_url }}</p>
+                        <p class="card-text">Skype          : {{ $hero->sk_url }}</p>
+                        <p class="card-text">Linkdin        : {{ $hero->ln_url }}</p>
+                        <p class="card-text">Instagram      : {{ $hero->in_url }}</p>
                     </div>
                 </div>
             @else

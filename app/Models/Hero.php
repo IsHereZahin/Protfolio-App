@@ -9,13 +9,6 @@ class Hero extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
-        'title',
-        'image',
-        'fb_url',
-        'x_url',
-        'in_url',
-        'sk_url',
-        'ln_url',
+        'name', 'surname', 'twitter_url', 'fb_url', 'in_url', 'sk_url', 'ln_url', 'image',
     ];
 }

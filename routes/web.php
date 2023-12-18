@@ -31,10 +31,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     #--------------------------------------------Hero-------------------------------------------------
     Route::get('/dashboard/hero/index', [HeroController::class,'index'])->name('dashboard.hero.index');
     Route::get('/dashboard/hero/create', [HeroController::class,'create'])->name('dashboard.hero.create');
-    Route::get('/dashboard/hero/store', [HeroController::class,'store'])->name('dashboard.hero.store');
+    Route::post('/dashboard/hero/store', [HeroController::class,'store'])->name('dashboard.hero.store');
     Route::get('/dashboard/hero/edit', [HeroController::class,'edit'])->name('dashboard.hero.edit');
-    Route::get('/dashboard/hero/update', [HeroController::class,'update'])->name('dashboard.hero.update');
-    Route::get('/dashboard/hero/delete', [HeroController::class,'delete'])->name('dashboard.hero.delete');
+    Route::post('/dashboard/hero/update', [HeroController::class,'update'])->name('dashboard.hero.update');
 
 });
 

@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('heroes', function (Blueprint $table) {
             $table->id();
+
+            $table->string('name');
+            $table->string('surname');
+            $table->text('image');
+            $table->string('twitter_url');
+            $table->string('fb_url');
+            $table->string('in_url');
+            $table->string('sk_url');
+            $table->string('ln_url');
+
             $table->timestamps();
         });
     }
