@@ -4,6 +4,14 @@
       <h1>{{ $hero->name }}</h1>
       <p>I'm
         <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span>
+        {{-- Output Error well be fixed --}}
+        {{-- <span class="typed"
+        data-typed-items="
+        @foreach ($herotitle as $title)
+            {{ $title->herotitle }},
+        @endforeach
+        ">
+        </span> --}}
       </p>
       <div class="social-links">
         <a href="{{ $hero->twitter_url }}" target="blank" class="twitter"><i class="bx bxl-twitter"></i></a>

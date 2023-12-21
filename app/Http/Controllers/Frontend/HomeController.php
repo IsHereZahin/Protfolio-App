@@ -14,8 +14,9 @@ class HomeController extends Controller
     public function index()
     {
         //
+        $herotitle = Hero::all();
         $hero = Hero::first();
-        return view('frontend.home.index', compact('hero'));
+        return view('frontend.home.index', compact('hero', 'herotitle'));
     }
 
     /**
