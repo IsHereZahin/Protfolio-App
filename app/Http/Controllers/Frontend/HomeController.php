@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Hero;
+use App\Models\HeroTitle;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,8 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //
-        $herotitle = Hero::all();
+        $herotitle = HeroTitle::all();
         $hero = Hero::first();
         return view('frontend.home.index', compact('hero', 'herotitle'));
     }

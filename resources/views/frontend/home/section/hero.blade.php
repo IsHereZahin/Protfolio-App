@@ -3,16 +3,14 @@
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>{{ $hero->name }}</h1>
       <p>I'm
-        <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span>
-        {{-- Output Error well be fixed --}}
-        {{-- <span class="typed"
-        data-typed-items="
-        @foreach ($herotitle as $title)
+        <span class="typed" data-typed-items="
+          @foreach ($herotitle as $title)
             {{ $title->herotitle }},
-        @endforeach
-        ">
-        </span> --}}
+          @endforeach
+        "></span>
       </p>
+
+
       <div class="social-links">
         <a href="{{ $hero->twitter_url }}" target="blank" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="{{ $hero->fb_url }}" target="blank" class="facebook"><i class="bx bxl-facebook"></i></a>
