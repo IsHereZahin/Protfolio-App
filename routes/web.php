@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\HeroTitleController;
@@ -42,6 +43,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard/hero/title/edit/{id}', [HeroTitleController::class,'edit'])->name('dashboard.hero.title.edit');
     Route::post('/dashboard/hero/title/update/{id}', [HeroTitleController::class,'update'])->name('dashboard.hero.title.update');
     Route::get('/dashboard/hero/title/delete/{id}', [HeroTitleController::class,'delete'])->name('dashboard.hero.title.delete');
+
+    #--------------------------------------------About Route-------------------------------------------------
+    Route::get('/dashboard/about/index', [AboutController::class,'index'])->name('dashboard.about.index');
+    Route::get('/dashboard/about/create', [AboutController::class,'create'])->name('dashboard.about.create');
+    Route::post('/dashboard/about/store', [AboutController::class,'store'])->name('dashboard.about.store');
+    Route::get('/dashboard/about/edit', [AboutController::class,'edit'])->name('dashboard.about.edit');
+    Route::post('/dashboard/about/update', [AboutController::class,'update'])->name('dashboard.about.update');
+    Route::get('/dashboard/about/delete', [AboutController::class,'delete'])->name('dashboard.about.delete');
 
 });
 

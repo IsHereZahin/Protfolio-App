@@ -18,11 +18,11 @@
                             <li class="sidebar-item"><a href="{{ route('dashboard.hero.title.index') }}" class="sidebar-link"><i class="fas fa-quote-left"></i><span class="hide-menu">Hero title</span></a></li>
                         </ul>
                     </li>
-                    {{--
                     <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.features.index')}}" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">Features</span></a>
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.about.index')}}" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">About</span></a>
                     </li>
 
+                    {{--
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.courses.index')}}" aria-expanded="false"><i class="fas fa-folder"></i><span class="hide-menu">Courses</span></a>
                     </li>
