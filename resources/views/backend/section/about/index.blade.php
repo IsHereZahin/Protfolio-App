@@ -44,6 +44,7 @@
                 @endif
             </div>
     <!-- ======= About Section ======= -->
+    @if($about)
     <section id="about" class="about">
         <div class="container" data-aos="fade-up">
 
@@ -83,4 +84,7 @@
 
         </div>
       </section><!-- End About Section -->
+    @else
+        <div class="alert alert-info"> No data found.</div>
+    @endif
 @endsection
