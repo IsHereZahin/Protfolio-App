@@ -46,7 +46,7 @@ class AboutController extends Controller
             'degree'        => 'required',
             'email'         => 'required',
             'freelance'     => 'required',
-            'long_desc'     => 'required|max:255',
+            'long_desc'     => 'required',
             'image'         => 'required|image|mimes:png,jpg',
         ]);
 

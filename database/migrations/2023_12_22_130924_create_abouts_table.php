@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
 
-            $table->string('top_desc');
-            $table->string('sort_desc');
+            $table->text('top_desc');
+            $table->text('sort_desc');
             $table->string('headline');
             $table->string('birthday');
             $table->string('website');
@@ -25,8 +25,8 @@ return new class extends Migration
             $table->string('degree');
             $table->string('email');
             $table->string('freelance');
-            $table->string('long_desc');
-            $table->string('image');
+            $table->text('long_desc');
+            $table->text('image');
 
             $table->timestamps();
         });
