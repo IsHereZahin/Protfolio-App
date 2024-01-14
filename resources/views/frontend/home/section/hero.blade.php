@@ -1,13 +1,15 @@
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center" style="background: url('{{ asset('Images/hero') }}/{{ $hero->image ?? ''}}') top right no-repeat;" >
+  <section id="hero" class="d-flex flex-column justify-content-center" style="background: url('{{ $hero ? asset('Images/hero/' . $hero->image) : asset('assets/img/hero-bg.jpg') }}') top right no-repeat;" >
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>{{ $hero->name ?? ''}}</h1>
+      <h1>{{ $hero->name ?? 'Zahin Mohammad'}}</h1>
       <p>I'm
         <span class="typed" data-typed-items="
-          @foreach ($herotitle as $title)
-            {{ $title->herotitle ?? ''}},
-          @endforeach
-        "></span>
+            @forelse ($herotitle as $title)
+                {{ $title->herotitle ?? '' }},
+            @empty
+                Designer, Developer, Freelancer, Photographer
+            @endforelse ">
+        </span>
       </p>
 
 
