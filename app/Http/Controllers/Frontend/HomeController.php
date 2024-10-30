@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Hero;
+use App\Models\Fact;
 use App\Models\HeroTitle;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,8 @@ class HomeController extends Controller
         $about = About::first();
         $herotitle = HeroTitle::all();
         $hero = Hero::first();
-        return view('frontend.home.index', compact('hero', 'herotitle', 'about'));
+        $fact = Fact::first();
+        return view('frontend.home.index', compact('hero', 'herotitle', 'about', 'fact'));
     }
 
     /**
