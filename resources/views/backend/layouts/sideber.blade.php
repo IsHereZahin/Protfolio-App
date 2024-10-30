@@ -22,6 +22,10 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.about.index')}}" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">About</span></a>
                     </li>
 
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.facts.index')}}" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">Facts</span></a>
+                    </li>
+
                     {{--
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.courses.index')}}" aria-expanded="false"><i class="fas fa-folder"></i><span class="hide-menu">Courses</span></a>

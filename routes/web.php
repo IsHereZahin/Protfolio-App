@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\FactsController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\HeroTitleController;
@@ -51,6 +52,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard/about/edit', [AboutController::class,'edit'])->name('dashboard.about.edit');
     Route::post('/dashboard/about/update', [AboutController::class,'update'])->name('dashboard.about.update');
     Route::get('/dashboard/about/delete', [AboutController::class,'delete'])->name('dashboard.about.delete');
+
+    #--------------------------------------------Facts Route-------------------------------------------------
+    Route::get('/dashboard/facts/index', [FactsController::class, 'index'])->name('dashboard.facts.index');
+    Route::get('/dashboard/facts/create', [FactsController::class, 'create'])->name('dashboard.facts.create');
+    Route::post('/dashboard/facts/store', [FactsController::class, 'store'])->name('dashboard.facts.store');
+    Route::get('/dashboard/facts/edit', [FactsController::class, 'edit'])->name('dashboard.facts.edit');
+    Route::put('/dashboard/facts/update', [FactsController::class, 'update'])->name('dashboard.facts.update');
+    Route::DELETE('/dashboard/facts/delete', [FactsController::class, 'destroy'])->name('dashboard.facts.delete');
 
 });
 
