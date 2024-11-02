@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\FactsController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\HeroTitleController;
+use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -60,6 +61,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard/facts/edit', [FactsController::class, 'edit'])->name('dashboard.facts.edit');
     Route::put('/dashboard/facts/update', [FactsController::class, 'update'])->name('dashboard.facts.update');
     Route::DELETE('/dashboard/facts/delete', [FactsController::class, 'destroy'])->name('dashboard.facts.delete');
+
+    // #--------------------------------------------Skills Route-------------------------------------------------
+    // Route::get('/dashboard/skills/index', [SkillController::class, 'index'])->name('dashboard.skills.index'); // List all skills
+    // Route::get('/dashboard/skills/create', [SkillController::class, 'create'])->name('dashboard.skills.create'); // Show form to create a new skill
+    // Route::post('/dashboard/skills/store', [SkillController::class, 'store'])->name('dashboard.skills.store'); // Store a new skill
+    // Route::get('/dashboard/skills/edit/{skill}', [SkillController::class, 'edit'])->name('dashboard.skills.edit'); // Show form to edit an existing skill
+    // Route::put('/dashboard/skills/update/{skill}', [SkillController::class, 'update'])->name('dashboard.skills.update'); // Update an existing skill
+    // Route::delete('/dashboard/skills/delete/{skill}', [SkillController::class, 'destroy'])->name('dashboard.skills.delete'); // Delete an existing skill
 
 });
 

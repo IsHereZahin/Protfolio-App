@@ -26,6 +26,10 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.facts.index')}}" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">Facts</span></a>
                     </li>
 
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.skills.index') }}" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">Skills</span></a>
+                    </li>
+
                     {{--
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.courses.index')}}" aria-expanded="false"><i class="fas fa-folder"></i><span class="hide-menu">Courses</span></a>
