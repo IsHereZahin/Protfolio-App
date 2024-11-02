@@ -18,13 +18,27 @@
             </div>
             @endif
 
-            <h1 class="text-center">Skills</h1>
+            <h1 class="text-center my-4">Skills</h1>
+        </div>
+
+        <div class="col-md-12 text-center mb-4">
+            <a href="{{ route('dashboard.skills.create') }}">
+                <button class="btn btn-info m-2">Add Skill</button>
+            </a>
+            <a href="{{ route('dashboard.skills.description.edit') }}">
+                <button class="btn btn-warning m-2">Edit Top Description</button>
+            </a>
         </div>
 
         <div class="col-md-12">
-            <a href="{{ route('dashboard.skills.create') }}">
-                <button class="btn btn-info m-3">Add Skill</button>
-            </a>
+            <div class="card mb-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Top Description</h5>
+                </div>
+                <div class="card-body">
+                    <p class="lead text-muted">{{ $skills->first()->top_description ?? 'No description available' }}</p>
+                </div>
+            </div>
         </div>
 
         <!-- Skills Content -->
@@ -33,10 +47,10 @@
                 <div class="card">
                     <div class="card-body">
                         @foreach($skills as $skill)
-                            <div class="skill-item mb-3">
+                            <div class="skill-item mb-4">
                                 <h5 class="card-title">{{ $skill->name }} <span class="badge bg-primary">{{ $skill->proficiency }}%</span></h5>
                                 <div class="progress mb-3">
-                                    <div class="progress-bar" role="progressbar" style="width: {{ $skill->proficiency }}%;" aria-valuenow="{{ $skill->proficiency }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: {{ $skill->proficiency }}%;" aria-valuenow="{{ $skill->proficiency }}" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <div class="gap-1">
                                     <a href="{{ route('dashboard.skills.edit', $skill->id) }}" class="btn btn-warning btn-sm">Edit</a>
@@ -51,10 +65,9 @@
                     </div>
                 </div>
             @else
-                <div class="alert alert-info"> No skills found.</div>
+                <div class="alert alert-info">No skills found.</div>
             @endif
         </div>
-
     </div>
 </div>
 @endsection

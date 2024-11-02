@@ -9,8 +9,9 @@ return new class extends Migration {
     {
         Schema::create('skills', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
-            $table->unsignedTinyInteger('proficiency');
+            $table->string('top_description')->nullable();
+            $table->string('name')->unique()->nullable();
+            $table->unsignedTinyInteger('proficiency')->default(0);
             $table->timestamps();
         });
     }

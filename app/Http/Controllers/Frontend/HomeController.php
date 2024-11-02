@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Hero;
 use App\Models\Fact;
+use App\Models\Skill;
 use App\Models\HeroTitle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -16,11 +18,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $skillDescription = DB::table('skills')->value('top_description');
         $about = About::first();
         $herotitle = HeroTitle::all();
         $hero = Hero::first();
         $fact = Fact::first();
-        return view('frontend.home.index', compact('hero', 'herotitle', 'about', 'fact'));
+        $skills = Skill::all();
+        return view('frontend.home.index', compact('hero', 'herotitle', 'about', 'fact', 'skills', 'skillDescription'));
     }
 
     /**
