@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('company');
             $table->date('start_date');
             $table->date('end_date')->nullable();
-            $table->text('description')->nullable();
+            $table->text('description');
             $table->timestamps();
         });
     }
