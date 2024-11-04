@@ -13,7 +13,7 @@ class EducationController extends Controller
      */
     public function index()
     {
-        $educations = Education::all();
+        $educations = Education::all()->sortByDesc(fn($item) => is_null($item->end_date));
         return view('backend.section.resume.education.index', compact('educations'));
     }
 

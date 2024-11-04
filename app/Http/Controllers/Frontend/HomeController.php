@@ -8,6 +8,9 @@ use App\Models\Hero;
 use App\Models\Fact;
 use App\Models\Skill;
 use App\Models\HeroTitle;
+use App\Models\Summary;
+use App\Models\Experience;
+use App\Models\Education;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -24,7 +27,10 @@ class HomeController extends Controller
         $hero = Hero::first();
         $fact = Fact::first();
         $skills = Skill::all();
-        return view('frontend.home.index', compact('hero', 'herotitle', 'about', 'fact', 'skills', 'skillDescription'));
+        $summary = Summary::first();
+        $education = Education::all()->sortByDesc(fn($item) => is_null($item->end_date));
+        $experience = Experience::all()->sortByDesc(fn($item) => is_null($item->end_date));
+        return view('frontend.home.index', compact('hero', 'herotitle', 'about', 'fact', 'skills', 'skillDescription', 'summary', 'experience', 'education'));
     }
 
     /**

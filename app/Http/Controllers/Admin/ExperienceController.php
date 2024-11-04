@@ -13,7 +13,7 @@ class ExperienceController extends Controller
      */
     public function index()
     {
-        $experiences = Experience::all();
+        $experiences = Experience::all()->sortByDesc(fn($item) => is_null($item->end_date));
         return view('backend.section.resume.experience.index', compact('experiences'));
     }
 
