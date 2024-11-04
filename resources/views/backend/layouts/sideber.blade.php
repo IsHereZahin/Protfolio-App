@@ -34,6 +34,7 @@
                         <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fa fa-align-left"></i><span class="hide-menu">Resume</span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
                             <li class="sidebar-item"><a href="{{ route('dashboard.summary.index')}}" class="sidebar-link"><i class="fas fa-info"></i><span class="hide-menu">Summary</span></a></li>
+                            <li class="sidebar-item"><a href="{{ route('dashboard.education.index')}}" class="sidebar-link"><i class="fas fa-info"></i><span class="hide-menu">Education</span></a></li>
                         </ul>
                     </li>
 

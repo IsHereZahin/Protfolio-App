@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\HeroTitleController;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\SummaryController;
+use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -82,6 +83,15 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('/dashboard/summary/update', [SummaryController::class, 'update'])->name('dashboard.summary.update');
     Route::DELETE('/dashboard/summary/destroy', [SummaryController::class, 'destroy'])->name('dashboard.summary.destroy');
 
+    // Education
+    Route::prefix('/dashboard/education')->name('dashboard.education.')->group(function () {
+        Route::get('/index', [EducationController::class, 'index'])->name('index');
+        Route::get('/create', [EducationController::class, 'create'])->name('create');
+        Route::post('/store', [EducationController::class, 'store'])->name('store');
+        Route::get('/edit/{education}', [EducationController::class, 'edit'])->name('edit');
+        Route::put('/update/{education}', [EducationController::class, 'update'])->name('update');
+        Route::delete('/destroy/{education}', [EducationController::class, 'destroy'])->name('destroy');
+    });
 });
 
 
