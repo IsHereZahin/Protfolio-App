@@ -57,7 +57,7 @@
 
                         <div class="form-group">
                             <label for="end_date">End Date</label>
-                            <input type="date" class="form-control @error('end_date') is-invalid @enderror" id="end_date" name="end_date" value="{{ old('end_date', $education->end_date) }}" required>
+                            <input type="date" class="form-control @error('end_date') is-invalid @enderror" id="end_date" name="end_date" value="{{ old('end_date', $education->end_date) }}">
                             @error('end_date')
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror

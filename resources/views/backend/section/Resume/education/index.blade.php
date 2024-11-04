@@ -35,7 +35,7 @@
                         @foreach($educations as $education)
                             <div class="skill-item mb-4">
                                 <h5 class="card-title">{{ $education->degree }} at {{ $education->institution }}</h5>
-                                <p class="text-muted">From: {{ $education->start_date }} to {{ $education->end_date }}</p>
+                                <p class="text-muted">From: {{ $education->start_date }} to {{ $education->end_date ?? 'Present' }}</p>
                                 <p class="text-muted">{!! $education->description !!}</p>
                                 <div class="gap-1">
                                     <a href="{{ route('dashboard.education.edit', $education->id) }}" class="btn btn-warning btn-sm">Edit</a>

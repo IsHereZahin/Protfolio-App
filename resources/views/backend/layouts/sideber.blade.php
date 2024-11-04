@@ -35,6 +35,7 @@
                         <ul aria-expanded="false" class="collapse  first-level">
                             <li class="sidebar-item"><a href="{{ route('dashboard.summary.index')}}" class="sidebar-link"><i class="fas fa-info"></i><span class="hide-menu">Summary</span></a></li>
                             <li class="sidebar-item"><a href="{{ route('dashboard.education.index')}}" class="sidebar-link"><i class="fas fa-info"></i><span class="hide-menu">Education</span></a></li>
+                            <li class="sidebar-item"><a href="{{ route('dashboard.experience.index')}}" class="sidebar-link"><i class="fas fa-info"></i><span class="hide-menu">Experience</span></a></li>
                         </ul>
                     </li>
 

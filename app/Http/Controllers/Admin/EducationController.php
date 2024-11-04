@@ -34,7 +34,7 @@ class EducationController extends Controller
             'degree' => 'required',
             'institution' => 'required',
             'start_date' => 'required|date',
-            'end_date' => 'required|date|after:start_date',
+            'end_date' => 'nullable|date|after:start_date',
             'description' => 'nullable|string',
         ]);
 
@@ -59,7 +59,7 @@ class EducationController extends Controller
             'degree' => 'required|string|max:255',
             'institution' => 'required|string|max:255',
             'start_date' => 'required|date',
-            'end_date' => 'required|date|after:start_date',
+            'end_date' => 'nullable|date|after:start_date',
             'description' => 'nullable|string',
         ]);
 
