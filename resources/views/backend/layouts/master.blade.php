@@ -217,6 +217,13 @@
 </div>
 <!-- End Wrapper -->
 
+<!-- CKEditor Script -->
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('mytextarea', {
+        height: 300,
+    });
+</script>
 
 <!-- All Jquery -->
 <script src="{{ asset('admin/assets/libs/jquery/dist/jquery.min.js') }}"></script>

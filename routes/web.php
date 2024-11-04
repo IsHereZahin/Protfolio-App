@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\HeroTitleController;
 use App\Http\Controllers\Admin\SkillController;
+use App\Http\Controllers\Admin\SummaryController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -71,7 +72,17 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/dashboard/skills/delete/{skill}', [SkillController::class, 'destroy'])->name('dashboard.skills.delete');
     Route::get('/dashboard/skills/description/edit', [SkillController::class, 'editDescription'])->name('dashboard.skills.description.edit');
     Route::put('/dashboard/skills/description/update', [SkillController::class, 'updateDescription'])->name('dashboard.skills.description.update');
-    });
+
+    #--------------------------------------------Resume Route-------------------------------------------------
+    // Summary
+    Route::get('/dashboard/summary/index', [SummaryController::class, 'index'])->name('dashboard.summary.index');
+    Route::get('/dashboard/summary/create', [SummaryController::class, 'create'])->name('dashboard.summary.create');
+    Route::post('/dashboard/summary/store', [SummaryController::class, 'store'])->name('dashboard.summary.store');
+    Route::get('/dashboard/summary/edit', [SummaryController::class, 'edit'])->name('dashboard.summary.edit');
+    Route::put('/dashboard/summary/update', [SummaryController::class, 'update'])->name('dashboard.summary.update');
+    Route::DELETE('/dashboard/summary/destroy', [SummaryController::class, 'destroy'])->name('dashboard.summary.destroy');
+
+});
 
 
 
