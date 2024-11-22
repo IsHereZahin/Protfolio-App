@@ -39,6 +39,10 @@
                         </ul>
                     </li>
 
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.portfolio.index') }}" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">Portfolio</span></a>
+                    </li>
+
                     {{--
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard.courses.index')}}" aria-expanded="false"><i class="fas fa-folder"></i><span class="hide-menu">Courses</span></a>
