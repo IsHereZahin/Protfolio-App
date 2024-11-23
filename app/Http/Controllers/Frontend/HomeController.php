@@ -30,7 +30,8 @@ class HomeController extends Controller
         $summary = Summary::first();
         $education = Education::all()->sortByDesc(fn($item) => is_null($item->end_date));
         $experience = Experience::all()->sortByDesc(fn($item) => is_null($item->end_date));
-        return view('frontend.home.index', compact('hero', 'herotitle', 'about', 'fact', 'skills', 'skillDescription', 'summary', 'experience', 'education'));
+        $portfolio = Portfolio::all();
+        return view('frontend.home.index', compact('hero', 'herotitle', 'about', 'fact', 'skills', 'skillDescription', 'summary', 'experience', 'education', 'portfolio'));
     }
 
     /**
