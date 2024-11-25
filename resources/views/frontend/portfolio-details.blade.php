@@ -106,6 +106,4 @@
     <!-- /Portfolio Details Section -->
 
 </main>
-
-@include('frontend.home.layouts.components.footer')
 @endsection

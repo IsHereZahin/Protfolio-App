@@ -1,7 +1,6 @@
 @extends('frontend.home.layouts.master')
 @section('content')
     {{-- navbar --}}
-    @include('frontend.home.layouts.components.navber')
     @include('frontend.home.section.hero')
     <main id="main">
         @include('frontend.home.section.about')
@@ -296,6 +295,4 @@
         </section><!-- End Contact Section -->
 
     </main>
-
-    @include('frontend.home.layouts.components.footer')
 @endsection
