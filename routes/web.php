@@ -27,6 +27,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 */
 // ------------------------------------------Frontend Route-------------------------------------------
 Route::get('/', [HomeController::class, 'index'])->name('#');
+Route::get('/portfolio/details/{portfolio}', [PortfolioController::class, 'details'])->name('portfolio.details');
 
 
 

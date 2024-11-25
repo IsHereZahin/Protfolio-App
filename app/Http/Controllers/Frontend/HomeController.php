@@ -11,6 +11,7 @@ use App\Models\HeroTitle;
 use App\Models\Summary;
 use App\Models\Experience;
 use App\Models\Education;
+use App\Models\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
