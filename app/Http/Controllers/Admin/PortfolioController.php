@@ -153,4 +153,8 @@ class PortfolioController extends Controller
 
         return redirect()->route('dashboard.portfolio.index')->with('success', 'Portfolio deleted successfully!');
     }
+
+    public function details(Portfolio $portfolio) {
+        return view('frontend.portfolio-details', compact('portfolio'));
+    }
 }

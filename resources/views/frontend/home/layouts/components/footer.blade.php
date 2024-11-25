@@ -18,8 +18,8 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: [license-url] -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-        Frontend Design by <a href="https://bootstrapmade.com/" target="blank">BootstrapMade</a>
-        and Development by <a href="https://github.com/DeveloperZahin/" target="blank">Abu Zahin Mohammad Nowsin</a>
+        Frontend Design by <a href="https://bootstrapmade.com/" target="blank">BootstrapMade</a> and<br/>
+        Development by <a href="https://github.com/DeveloperZahin/" target="blank">Abu Zahin Mohammad Nowsin</a>
       </div>
     </div>
   </footer><!-- End Footer -->

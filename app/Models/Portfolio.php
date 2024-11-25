@@ -27,9 +27,4 @@ class Portfolio extends Model
     {
         return $this->hasMany(PortfolioImage::class);
     }
-
-    public function featuredImage()
-    {
-        return $this->hasOne(PortfolioImage::class)->where('is_featured', true);
-    }
 }
